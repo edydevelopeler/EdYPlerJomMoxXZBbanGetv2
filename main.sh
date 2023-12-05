@@ -108,22 +108,6 @@ function base_package() {
 }
 clear
 
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m" 
-clear
-# Version sc
-clear
-#########################
-# USERNAME
-rm -f /usr/bin/user
-username=$(curl https://raw.githubusercontent.com/edydevelopeler/EdyIziNs4k-tC0lLyAhH/main/ip | grep $MYIP | awk '{print $2}')
-#username=$(curl https://abc.xcodehoster.com/izin | grep $MYIP | awk '{print $2}')
-echo "$username" >/usr/bin/user
-expx=$(curl https://raw.githubusercontent.com/edydevelopeler/EdyIziNs4k-tC0lLyAhH/main/ip | grep $MYIP | awk '{print $3}')
-$expx=$(curl https://abc.xcodehoster.com/izin | grep $MYIP | awk '{print $3}')
-echo "$expx" >/usr/bin/e
-
 ### Buat direktori xray
 function dir_xray() {
     print_install "Membuat direktori xray"
@@ -504,12 +488,11 @@ function finish(){
 <code>────────────────────</code>
 <b> ⚠️ FREE AUTOSC EdyVPN ⚠️ </b>
 <code>────────────────────</code>
-<code>User     : </code><code>${USRSC}</code>
+<code>User     : </code><code>${NAMES}</code>
 <code>Time     : </code><code>${TIME}</code>
 <code>IP VPS   : </code><code>${MYIP}</code>
 <code>Domain   : </code><code>${domain}</code>
 <code>ISP      : </code><code>${ISP}</code>
-<code>Lokasi   : </code><code>${CITY}</code>
 <code>RAM      : </code><code>${RAMMS}MB</code>
 <code>OS       : </code><code>${OS}</code>
 <code>Owner    : </code><code>@kangbacox</code>
