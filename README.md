@@ -1,20 +1,6 @@
-### ORDER AUTOSCRIPT/IZIN IP
-- PRICELIST
-```
-HARGA SEWA AUTOSCRIPT 
-1 Bulan : 10K
-2 Bulan : 20K
-3 Bulan : 30K
-
-1 Tahun : 75K
-LIFETIME: 100K
-```
-• HUBUNGI:
-- Telegram: [Klik Disini](https://t.me/J)
+### EDY TUNNELING
 
 ### PERHATIAN
-
-
 - Jika mendapatkan error pada servis dalam jangka panjang, bisa restart servis yang dead.
 
 ### INSTALL SCRIPT 1
