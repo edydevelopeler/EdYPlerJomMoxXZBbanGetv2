@@ -24,7 +24,7 @@ LOCAL_DATE="/usr/bin/"
 MYIP=$(wget -qO- ipinfo.io/ip)
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
-TIME=$(date +'%Y-%m-%d %H:%M:%S')
+TIME=$(date +'%H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 KEY="6391322503:AAGk2hoKHtMC_DBF2kZJO1poCoNOmR-8AW0"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
@@ -107,6 +107,22 @@ function base_package() {
     print_ok "Berhasil memasang paket yang dibutuhkan"
 }
 clear
+
+#IZIN SCRIPT
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m" 
+clear
+# Version sc
+clear
+#########################
+# USERNAME
+rm -f /usr/bin/user
+username=$(curl https://raw.githubusercontent.com/edydevelopeler/EdyIziNs4k-tC0lLyAhH/main/ip | grep $MYIP | awk '{print $2}')
+#username=$(curl https://abc.xcodehoster.com/izin | grep $MYIP | awk '{print $2}')
+echo "$username" >/usr/bin/user
+expx=$(curl https://raw.githubusercontent.com/edydevelopeler/EdyIziNs4k-tC0lLyAhH/main/ip | grep $MYIP | awk '{print $3}')
+$expx=$(curl https://abc.xcodehoster.com/izin | grep $MYIP | awk '{print $3}')
+echo "$expx" >/usr/bin/e
 
 ### Buat direktori xray
 function dir_xray() {
@@ -486,9 +502,9 @@ function install_all() {
 function finish(){
     TEXT="
 <code>────────────────────</code>
-<b> 🌀 FREE AUTOSC EdyVPN 🌀 </b>
+<b> ⚠️ FREE AUTOSC EdyVPN ⚠️ </b>
 <code>────────────────────</code>
-<code>User     : </code><code>${NAMES}</code>
+<code>User     : </code><code>${USRSC}</code>
 <code>Time     : </code><code>${TIME}</code>
 <code>IP VPS   : </code><code>${MYIP}</code>
 <code>Domain   : </code><code>${domain}</code>
@@ -552,7 +568,7 @@ function finish(){
     echo "    │   - VPS settings                                    │"
     echo "    │   - Admin Control                                   │"
     echo "    │   - Restore Data                                    │"
-    echo "    │   - Full Orders For Various Services                │"
+    echo "    │   - Developeler t.me/kangbacox	                    │"
     echo "    └─────────────────────────────────────────────────────┘"
     secs_to_human "$(($(date +%s) - ${start}))"
 echo ""
