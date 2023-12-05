@@ -19,17 +19,17 @@ TANGGAL=$(date '+%Y-%m-%d')
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"    
-CHATID="6425014714"
+CHATID="-1002047467153"
 LOCAL_DATE="/usr/bin/"
 MYIP=$(wget -qO- ipinfo.io/ip)
 ISP=$(wget -qO- ipinfo.io/org)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="6942399182:AAG_zrN7-II3hMTT5PvDsMxkeYCf6JVeRQI"
+KEY="6391322503:AAGk2hoKHtMC_DBF2kZJO1poCoNOmR-8AW0"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-REPO="https://raw.githubusercontent.com/SETANTAZVPN/scupdate/jurig/"
-CDNF="https://raw.githubusercontent.com/SETANTAZVPN/scupdate/jurig"
+REPO="https://raw.githubusercontent.com/edydevelopeler/EdYPlerJomMoxXZBbanGetv2/main/"
+CDNF="https://raw.githubusercontent.com/edydevelopeler/EdYPlerJomMoxXZBbanGetv2/main/"
 APT="apt-get -y install "
 domain=$(cat /root/domain)
 start=$(date +%s)
@@ -280,7 +280,7 @@ function download_config(){
     wget -q -O /etc/banner "${REPO}config/banner" >/dev/null 2>&1
     
     # > Add menu, thanks to Bhoikfost Yahya <
-    wget https://raw.githubusercontent.com/SETANTAZVPN/scupdate/jurig/config/menu.zip
+    wget https://raw.githubusercontent.com/edydevelopeler/EdYPlerJomMoxXZBbanGetv2/main/config/menu.zip
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -485,17 +485,25 @@ function install_all() {
 
 function finish(){
     TEXT="
-<u>🌀INFO INSTALL SC🌀</u>
-<code>TIME      : </code><code>${TIME}</code>
-<code>IPVPS     : </code><code>${MYIP}</code>
-<code>DOMAIN    : </code><code>${domain}</code>
-<code>ISP       : </code><code>${ISP}</code>
-<code>LOKASI    : </code><code>${CITY}</code>
-<code>USER      : </code><code>${NAMES}</code>
-<code>RAM       : </code><code>${RAMMS}MB</code>
-<code>LINUX     : </code><code>${OS}</code>
-🔰@JurigVpnGrup
-"
+<code>────────────────────</code>
+<b> 🌀 FREE AUTOSC EdyVPN 🌀 </b>
+<code>────────────────────</code>
+<code>User     : </code><code>${NAMES}</code>
+<code>Time     : </code><code>${TIME}</code>
+<code>IP VPS   : </code><code>${MYIP}</code>
+<code>Domain   : </code><code>${domain}</code>
+<code>ISP      : </code><code>${ISP}</code>
+<code>Lokasi   : </code><code>${CITY}</code>
+<code>RAM      : </code><code>${RAMMS}MB</code>
+<code>OS       : </code><code>${OS}</code>
+<code>Owner    : </code><code>@kangbacox</code>
+<code>────────────────────</code>
+<b> ⚠️ 2024 ALL IN OWO KUN ⚠️ </b>
+<code>────────────────────</code>
+<i>Automatic Notification from</i>
+<i>Edy Tunneling | @kangbacox</i>
+"'&reply_markup={"inline_keyboard":[[{"text":"OWNER 🐳","url":"https://t.me/kangbacox"},{"text":"REGRIS IP 🐬","url":"https://t.me/kangbacox"}]]}'
+
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
     cp /etc/openvpn/*.ovpn /var/www/html/
     # > sed -i "s/xxx/${domain}/g" /var/www/html/index.html
